@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white p-4 text-center font-bold text-lg">
+        Weather Forecast Application
+    </header>
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <!-- Search Section -->
+        <section class="bg-white p-6 rounded shadow-md">
+            <h1 class="text-2xl font-bold mb-4 text-center">Search Weather by City</h1>   
+            <!-- Input and Buttons -->
+            <div class="flex flex-col md:flex-row items-center gap-4 justify-center">
+                <input id="city-input" type="text" placeholder="Enter city name" class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-1/2">
+                <button id="search-btn" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Search</button>
+                <button id="current-location-btn" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Use Current Location</button>
+            </div>
+            <!-- Recently Searched Dropdown -->
+            <div class="mt-6">
+                <label for="recent-cities" class="block text-lg font-medium text-gray-700">Recently Searched Cities</label>
+                <select id="recent-cities" class="mt-2 p-2 border border-gray-300 rounded w-full hidden">
+                    <!-- Options dynamically added -->
+                </select>
+            </div>
+        </section>
+        <!-- Weather Display -->
+        <section id="weather-display" class="bg-white mt-6 p-6 rounded shadow-md hidden">
+            <h2 id="city-name" class="text-2xl font-bold text-center mb-4"></h2>
+            <p id="current-date" class="text-center text-gray-600 mb-4"></p>
+            <div class="flex flex-col items-center gap-4">
+                <img id="weather-icon" src="" alt="Weather Icon" class="w-20 h-20">
+                <p id="current-temperature" class="text-4xl font-bold"></p>
+                <p id="current-description" class="text-gray-600"></p>
+            </div>
+        <!-- Extended Forecast -->
+            <h3 class="text-xl font-bold mt-8 mb-4 text-center">Extended Forecast</h3>
+            <div id="extended-forecast" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Forecast cards dynamically added -->
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        © 2024 Weather Forecast App
+    </footer>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

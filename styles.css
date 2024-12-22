@@ -1,0 +1,23 @@
+/* Custom styles for additional polish */
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+button {
+    transition: background-color 0.3s ease-in-out;
+}
+.hidden {
+    display: none;
+}
+#weather-display {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#extended-forecast .forecast-card {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
